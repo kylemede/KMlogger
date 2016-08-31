@@ -18,17 +18,8 @@ class KMlogger(logging.getLoggerClass()):
     be changed easily using the setStreamLevel(lvl) member function.
     """       
     
-    def setStreamLevel(self,lvl=20):
+    def addNewLvls(self):
         """
-        Set/change the level for the stream handler for a logging object.
-        Any file handlers will be left alone.
-        All messages of a higher severity level than 'lvl' will be printed 
-        to the screen.
-        
-        Args:    
-            lvl (int): The severity level of messages printed to the screen with 
-                    the stream handler, default = 20.
-        
         +---------------------+----------------------+
         |    Standard Levels  |        New Levels    |
         +---------------+-----+----------------+-----+
@@ -71,6 +62,19 @@ class KMlogger(logging.getLoggerClass()):
         def fileonly(self,msg,lvl=FILEONLY, *args, **kws):
             self.log(lvl,msg, *args, **kws)
         logging.Logger.fileonly = fileonly
+        
+    
+    def setStreamLevel(self,lvl=20):
+        """
+        Set/change the level for the stream handler for a logging object.
+        Any file handlers will be left alone.
+        All messages of a higher severity level than 'lvl' will be printed 
+        to the screen.
+        
+        Args:    
+            lvl (int): The severity level of messages printed to the screen with 
+                    the stream handler, default = 20.
+        """
         # Kill off the old handlers and reset them with the setHandlers func
         for i in range(0,len(self.handlers)):
             h = self.handlers[i]
@@ -78,6 +82,7 @@ class KMlogger(logging.getLoggerClass()):
                 self.removeHandler(h)
                 break
         addStreamHandler(self,lvl)
+        
     def getStreamLevel(self):
         """
         Get and return current stream handler's level.
@@ -88,6 +93,7 @@ class KMlogger(logging.getLoggerClass()):
             if isinstance(h,logging.StreamHandler):
                 shlvl = h.level
         return shlvl
+    
         
 def getLogger(name='generalLoggerName',dir='',lvl=20,addFH=True,addSH=True,):
     """This will either return the logging object already
@@ -145,6 +151,7 @@ def setUpLogger(name='generalLoggerName',dir='',lvl=20,addFH=True,addSH=True):
     logging.setLoggerClass(KMlogger)
     log = logging.getLogger(name)
     log_dict[name]=log
+    log.addNewLvls()
     log.setLevel(1)
     # add the requested handlers to the log
     if addFH:
