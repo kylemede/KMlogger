@@ -13,5 +13,5 @@ License
 
 Copyright 2016 Kyle Mede and contributors.
 
-ExoSOFT is free software made available under the GNU GPLv3 license. 
+KMlogger is free software made available under the GNU GPLv3 license. 
 For details see the license.txt file.
