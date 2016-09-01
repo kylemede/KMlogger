@@ -1,9 +1,8 @@
+KMlogger
+========
+
 .. image:: https://travis-ci.org/kylemede/KMlogger.svg?branch=master
    :target: https://travis-ci.org/kylemede/KMlogger.svg?branch=master
-
-
-
- KMlogger
  
 A Python logging object that provides a few upgrades beyond those available in the standard Python module.
 
