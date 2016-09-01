@@ -1,9 +1,11 @@
 #@Author: Kyle Mede, kylemede@astron.s.u-tokyo.ac.jp
+from __future__ import absolute_import
 import logging
 import platform
 import datetime
 import sys
 import os
+from six.moves import range
 #import traceback
 
 log_dict={}
@@ -124,9 +126,10 @@ class KMlogger(logging.getLoggerClass()):
         """
         sh = logging.StreamHandler(sys.stdout)
         sh.setLevel(lvl)
-        if False:
-            sFrmt = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
         sFrmt = logging.Formatter('%(message)s')
+        if False:
+            #Another format example
+            sFrmt = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
         sh.setFormatter(sFrmt)
         self.addHandler(sh)   
         
@@ -186,7 +189,7 @@ class KMlogger(logging.getLoggerClass()):
         Args:
             d (dictionary): A standard python dictionary.
         """
-        keys = d.keys()
+        keys = list(d.keys())
         keys.sort()
         s = "\n"+"-"*78+"\n"+" "*20+"dictionary provided contains:\n"+"-"*78+"\n"
         for key in keys:
