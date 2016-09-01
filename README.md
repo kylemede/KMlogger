@@ -1,4 +1,5 @@
 .. image:: https://travis-ci.org/kylemede/KMlogger.svg?branch=master
+   :target: https://travis-ci.org/kylemede/KMlogger.svg?branch=master
 
 
 
