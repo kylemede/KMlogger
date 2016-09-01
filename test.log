@@ -1,0 +1,145 @@
+2016-09-01 15:33:45,673 - main - FILEONLY - Date KMlogger object instantiated: Sep 01, 2016
+
+
+=========== System Information Summary ===========
+OS type = Linux
+OS Version = 4.4.14-200.fc22.x86_64
+Machine UserName = kylesDesktop
+Machine Processor Type = x86_64
+ A problem with psutil occurred while investigating available RAM.
+Python Version = '2.7.11'
+==================================================
+2016-09-01 15:33:45,673 - main - FILEONLY - 
+------------------------------------------------------------------------------
+                    dictionary provided contains:
+------------------------------------------------------------------------------
+a = 1
+b = 2
+c = 3
+------------------------------------------------------------------------------
+
+2016-09-01 15:33:45,673 - main - RAISEMSG - This is a raisemsg level (99) message
+2016-09-01 15:33:45,673 - main - CRITICAL - This is a critical level (50) message
+2016-09-01 15:33:45,673 - main - ERROR - This is an error level (40) message
+2016-09-01 15:33:45,673 - main - WARNING - This is a warning level (30) message
+2016-09-01 15:33:45,673 - main - IMPORTANTINFO - this is an importantinfo level (25) message
+2016-09-01 15:33:45,673 - main - INFO - This is a info level (20) message
+2016-09-01 15:33:45,673 - main - DEBUG - This is a debug level (10) message
+2016-09-01 15:33:45,673 - main - FILEONLY - This is a fileonly level (1) message
+2016-09-01 15:33:54,211 - main - FILEONLY - Date KMlogger object instantiated: Sep 01, 2016
+
+
+=========== System Information Summary ===========
+OS type = Linux
+OS Version = 4.4.14-200.fc22.x86_64
+Machine UserName = kylesDesktop
+Machine Processor Type = x86_64
+ A problem with psutil occurred while investigating available RAM.
+Python Version = '2.7.11'
+==================================================
+2016-09-01 15:33:54,212 - main - FILEONLY - 
+------------------------------------------------------------------------------
+                    dictionary provided contains:
+------------------------------------------------------------------------------
+a = 1
+b = 2
+c = 3
+------------------------------------------------------------------------------
+
+2016-09-01 15:33:54,212 - main - RAISEMSG - This is a raisemsg level (99) message
+2016-09-01 15:33:54,212 - main - CRITICAL - This is a critical level (50) message
+2016-09-01 15:33:54,212 - main - ERROR - This is an error level (40) message
+2016-09-01 15:33:54,212 - main - WARNING - This is a warning level (30) message
+2016-09-01 15:33:54,212 - main - IMPORTANTINFO - this is an importantinfo level (25) message
+2016-09-01 15:33:54,212 - main - INFO - This is a info level (20) message
+2016-09-01 15:33:54,212 - main - DEBUG - This is a debug level (10) message
+2016-09-01 15:33:54,212 - main - FILEONLY - This is a fileonly level (1) message
+2016-09-01 15:34:39,186 - main - FILEONLY - Date KMlogger object instantiated: Sep 01, 2016
+
+
+=========== System Information Summary ===========
+OS type = Linux
+OS Version = 4.4.14-200.fc22.x86_64
+Machine UserName = kylesDesktop
+Machine Processor Type = x86_64
+ A problem with psutil occurred while investigating available RAM.
+Python Version = '2.7.11'
+==================================================
+2016-09-01 15:34:39,186 - main - FILEONLY - 
+------------------------------------------------------------------------------
+                    dictionary provided contains:
+------------------------------------------------------------------------------
+a = 1
+b = 2
+c = 3
+------------------------------------------------------------------------------
+
+2016-09-01 15:34:39,186 - main - RAISEMSG - This is a raisemsg level (99) message
+2016-09-01 15:34:39,186 - main - CRITICAL - This is a critical level (50) message
+2016-09-01 15:34:39,186 - main - ERROR - This is an error level (40) message
+2016-09-01 15:34:39,186 - main - WARNING - This is a warning level (30) message
+2016-09-01 15:34:39,186 - main - IMPORTANTINFO - this is an importantinfo level (25) message
+2016-09-01 15:34:39,187 - main - INFO - This is a info level (20) message
+2016-09-01 15:34:39,187 - main - DEBUG - This is a debug level (10) message
+2016-09-01 15:34:39,187 - main - FILEONLY - This is a fileonly level (1) message
+2016-09-01 15:34:58,006 - main - FILEONLY - Date KMlogger object instantiated: Sep 01, 2016
+
+
+=========== System Information Summary ===========
+OS type = Linux
+OS Version = 4.4.14-200.fc22.x86_64
+Machine UserName = kylesDesktop
+Machine Processor Type = x86_64
+ A problem with psutil occurred while investigating available RAM.
+Python Version = '2.7.11'
+==================================================
+2016-09-01 15:34:58,006 - main - FILEONLY - 
+------------------------------------------------------------------------------
+                    dictionary provided contains:
+------------------------------------------------------------------------------
+a = 1
+b = 2
+c = 3
+------------------------------------------------------------------------------
+
+2016-09-01 15:34:58,007 - main - RAISEMSG - This is a raisemsg level (99) message
+2016-09-01 15:34:58,007 - main - CRITICAL - This is a critical level (50) message
+2016-09-01 15:34:58,007 - main - ERROR - This is an error level (40) message
+2016-09-01 15:34:58,007 - main - WARNING - This is a warning level (30) message
+2016-09-01 15:34:58,007 - main - IMPORTANTINFO - this is an importantinfo level (25) message
+2016-09-01 15:34:58,007 - main - INFO - This is a info level (20) message
+2016-09-01 15:34:58,007 - main - DEBUG - This is a debug level (10) message
+2016-09-01 15:34:58,007 - main - FILEONLY - This is a fileonly level (1) message
+2016-09-01 15:38:57,752 - main - FILEONLY - Date KMlogger object instantiated: Sep 01, 2016
+
+
+=========== System Information Summary ===========
+OS type = Linux
+OS Version = 4.4.14-200.fc22.x86_64
+Machine UserName = kylesDesktop
+Machine Processor Type = x86_64
+ A problem with psutil occurred while investigating available RAM.
+Python Version = '2.7.11'
+==================================================
+2016-09-01 15:38:57,752 - main - FILEONLY - 
+------------------------------------------------------------------------------
+                    dictionary provided contains:
+------------------------------------------------------------------------------
+a = 1
+b = 2
+c = 3
+------------------------------------------------------------------------------
+
+2016-09-01 15:38:57,752 - main - RAISEMSG - This is a raisemsg level (99) message
+2016-09-01 15:38:57,752 - main - CRITICAL - This is a critical level (50) message
+2016-09-01 15:38:57,752 - main - ERROR - This is an error level (40) message
+2016-09-01 15:38:57,752 - main - WARNING - This is a warning level (30) message
+2016-09-01 15:38:57,752 - main - IMPORTANTINFO - this is an importantinfo level (25) message
+2016-09-01 15:38:57,753 - main - INFO - This is a info level (20) message
+2016-09-01 15:38:57,753 - main - DEBUG - This is a debug level (10) message
+2016-09-01 15:38:57,753 - main - FILEONLY - This is a fileonly level (1) message
+2016-09-01 15:38:57,753 - main - ERROR - This is an exception message
+Traceback (most recent call last):
+  File "example.py", line 61, in main
+    a = 1.0/0.0
+ZeroDivisionError: float division by zero

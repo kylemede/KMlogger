@@ -39,16 +39,16 @@ class KMlogger(logging.getLoggerClass()):
         +---------------+-----+----------------+-----+
         |DEBUG          |  10 |                |     |
         +---------------+-----+----------------+-----+
-        |               |     |     FILEONLY   |  1  |
+        |               |     |FILEONLY        |  1  |
         +---------------+-----+----------------+-----+
         |NOTSET         |  0  |                |     |
         +---------------+-----+----------------+-----+
         """
-        # Level for raise message to print to file 
+        # Level for raise message to print to file (File only)
         RAISEMSG = 99
         logging.addLevelName(RAISEMSG, 'RAISEMSG')
         def raisemsg(self,msg,lvl=RAISEMSG, *args, **kws):
-            self.log(1,msg, *args, **kws)
+            self.log(lvl,msg, *args, **kws)
         logging.Logger.raisemsg = raisemsg
         # Level for minimal info more important than standard INFO level
         IMPORTANTINFO = 25
@@ -94,13 +94,11 @@ class KMlogger(logging.getLoggerClass()):
                 shlvl = h.level
         return shlvl
     
-    def addFileHandler(self,filename='', dir='',lvl=1):
+    def addFileHandler(self,filename='', dr='',lvl=1):
         """
         This function will add a file handler to a log with the provided level.
         
         Args:
-            log (KMlogger object): A KMlogger object that was freshly 
-                                       instantiated.
             lvl (int): The severity level of messages printed to the file with 
                         the file handler, default = 1.
         """
@@ -109,7 +107,7 @@ class KMlogger(logging.getLoggerClass()):
             fname = filename
         if '.' not in fname:
             fname+='.log'
-        fh = logging.FileHandler(os.path.join(dir,fname))
+        fh = logging.FileHandler(os.path.join(dr,fname))
         fh.setLevel(lvl)
         frmtString = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         fFrmt = logging.Formatter(frmtString)
@@ -121,8 +119,6 @@ class KMlogger(logging.getLoggerClass()):
         This function will add a stream handler to a log with the provided level.
         
         Args:
-            log (KMlogger object): A KMlogger object that was freshly 
-                                       instantiated.
             lvl (int): The severity level of messages printed to the screen with 
                         the stream handler, default = 20.
         """
@@ -142,10 +138,7 @@ class KMlogger(logging.getLoggerClass()):
         psutil and platform libraries, so they must be install for it to work.  
         For clarity of the log, it is suggested to perform immediately after 
         instantiation to put it at the top of the log file.
-        
-        Args:
-            log (KMlogger object): A KMlogger object to have the system's 
-                                        info summarized in.
+
                                         
         The messages this prints to the log will look like:
         
@@ -160,7 +153,7 @@ class KMlogger(logging.getLoggerClass()):
     
         """
         t = datetime.date.today()
-        infoStr = 'Date ExoSOFT started this run: '+t.strftime('%b %d, %Y')+'\n\n'
+        infoStr = 'Date KMlogger object instantiated: '+t.strftime('%b %d, %Y')+'\n\n'
         infoStr+="\n"+"="*11+' System Information Summary '+'='*11
         infoStr+="\n"+'OS type = '+platform.uname()[0]
         infoStr+="\n"+'OS Version = '+platform.uname()[2]
@@ -191,19 +184,17 @@ class KMlogger(logging.getLoggerClass()):
         Log all Key=value for every key in a dictionary.
           
         Args:
-            log (KMlogger object): A KMlogger object to have the system's 
-                                        info summarized in.
             d (dictionary): A standard python dictionary.
         """
         keys = d.keys()
         keys.sort()
-        s = "\n"+"-"*78+"\n"+" "*20+"settings dictionary currently contains:\n"+"-"*78+"\n"
+        s = "\n"+"-"*78+"\n"+" "*20+"dictionary provided contains:\n"+"-"*78+"\n"
         for key in keys:
             s+=key+" = "+repr(d[key])+"\n"
         self.fileonly(s+"-"*78+"\n")
     
         
-def getLogger(name='generalLoggerName',dir='',lvl=20,addFH=True,addSH=True,):
+def getLogger(name='generalLoggerName',dr='',lvl=20,addFH=True,addSH=True,):
     """This will either return the logging object already
     instantiated, or instantiate a new one and return it.  
     **Use this function to both create and return any logger** to avoid 
@@ -229,10 +220,10 @@ def getLogger(name='generalLoggerName',dir='',lvl=20,addFH=True,addSH=True,):
     try:
         log = log_dict[name]
     except:
-        log = setUpLogger(name,dir,lvl,addFH,addSH)
+        log = setUpLogger(name,dr,lvl,addFH,addSH)
     return log
 
-def setUpLogger(name='generalLoggerName',dir='',lvl=20,addFH=True,addSH=True):
+def setUpLogger(name='generalLoggerName',dr='',lvl=20,addFH=True,addSH=True):
     """ This function is utilized by getLogger to set up a new logging object.
     It will have the default name 'generalLoggerName' and stream handler level
     of 20 unless redefined in the function call.  
@@ -263,7 +254,7 @@ def setUpLogger(name='generalLoggerName',dir='',lvl=20,addFH=True,addSH=True):
     log.setLevel(1)
     # add the requested handlers to the log
     if addFH:
-        log.addFileHandler(dir,lvl=1)
+        log.addFileHandler(dr=dr,lvl=1)
     # make a stream handler
     if addSH:
         log.addStreamHandler(lvl)
