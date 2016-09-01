@@ -31,11 +31,12 @@ else:
 
 setup(    
     name='KMlogger', 
+    packages =['KMlogger'],
     version="1.0.0", 
     author='Kyle Mede',
     author_email = 'kylemede@gmail.com',
     url = 'https://github.com/kylemede/KMlogger',
-    packages =['kmlogger'],
+    
     license = ['GNU GPLv3'],
     description ='Exoplanet Simple Orbit Fitting Toolbox',
     long_description=rd("README.rst") + "\n\n"
@@ -43,6 +44,7 @@ setup(
                     + rd("HISTORY.rst"),
     package_data={"": ["LICENSE", "AUTHORS.rst"]},
     include_package_data=True,
+    keywords=['logging'],
     classifiers = [
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Science/Research',

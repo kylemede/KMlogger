@@ -1,8 +1,8 @@
-import kmlogger
+import KMlogger
 
 def main():
     print '\nGet a logging object with stream level set to 0, and no file handler.'
-    log = kmlogger.getLogger('main',lvl=0,addFH=False)
+    log = KMlogger.getLogger('main',lvl=0,addFH=False)
     
     # print a message for each level
     # ALL levels will be shown.
