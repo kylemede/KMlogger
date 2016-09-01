@@ -9,8 +9,9 @@ A Python logging object that provided additional functionality beyond the standa
 
 Installation Notes
 ==================
-Currently KMlogger does not need installation directions.  Just copy the 
-module and use it.  The dependencies are all reasonably standard python libraries.
+Only uses standardized Python libraries and KMlogger is hosted on PyPi.  Thus, the easiest way to install it is:
+ 
+ $pip install KMlogger
 
 
 License
