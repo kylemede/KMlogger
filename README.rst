@@ -4,7 +4,7 @@ KMlogger
 .. image:: https://travis-ci.org/kylemede/KMlogger.svg?branch=master
    :target: https://travis-ci.org/kylemede/KMlogger.svg?branch=master
  
-A Python logging object that provides a few upgrades beyond those available in the standard Python module.
+A Python logging object that provided additional functionality beyond the standard module.
 
 
 Installation Notes
