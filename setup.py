@@ -35,7 +35,7 @@ setup(
     author='Kyle Mede',
     author_email = 'kylemede@gmail.com',
     url = 'https://github.com/kylemede/KMlogger',
-    packages =['exosoft'],
+    packages =['kmlogger'],
     license = ['GNU GPLv3'],
     description ='Exoplanet Simple Orbit Fitting Toolbox',
     long_description=rd("README.rst") + "\n\n"
