@@ -37,7 +37,7 @@ setup(
     author_email = 'kylemede@gmail.com',
     url = 'https://github.com/kylemede/KMlogger',
     license = ['GNU GPLv3'],
-    description ='A Python logging object that provided additional functionality beyond the standard module.',
+    description ='A Python logging object that provides additional functionality beyond the standard module.',
     long_description=rd("README.md") + "\n\n"
                     + "---------\n\n",
     package_data={"": ["LICENSE", "AUTHORS.rst"]},

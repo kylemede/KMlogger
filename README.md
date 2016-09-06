@@ -5,7 +5,7 @@ KMlogger
 [![Coverage Status](https://coveralls.io/repos/github/kylemede/KMlogger/badge.svg?branch=master)](https://coveralls.io/github/kylemede/KMlogger?branch=master)
 [![PyPI version](https://badge.fury.io/py/KMlogger.svg)](https://badge.fury.io/py/KMlogger)
 
-A Python logging object that provided additional functionality beyond the standard module.
+A Python logging object that provides additional functionality beyond the standard module.
 
 
 Installation Notes
