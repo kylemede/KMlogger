@@ -9,7 +9,7 @@ python:
 # command to install dependencies
 install: 
 - pip install -r requirements.txt
-- pip install coveralls
+- pip install python-coveralls
 # command to run tests
 script:
   coverage run --source=KMlogger setup.py test
