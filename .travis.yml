@@ -12,6 +12,6 @@ install:
 - pip install coveralls
 # command to run tests
 script:
-  coverage run --source=KMlogger setup.py
+  coverage run --source=KMlogger setup.py test
 after_success:
   coveralls
