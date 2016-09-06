@@ -2,7 +2,7 @@ KMlogger
 ========
 
 [![Build Status](https://travis-ci.org/kylemede/KMlogger.svg?branch=master)](https://travis-ci.org/kylemede/KMlogger)
-[![Coverage Status](https://coveralls.io/repos/github/kylemede/KMlogger/badge.svg?branch=master)](https://coveralls.io/github/kylemede/KMlogger?branch=master)
+<!--[![Coverage Status](https://coveralls.io/repos/github/kylemede/KMlogger/badge.svg?branch=master)](https://coveralls.io/github/kylemede/KMlogger?branch=master)-->
 [![PyPI version](https://badge.fury.io/py/KMlogger.svg)](https://badge.fury.io/py/KMlogger)
 [![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/kylemede/KMlogger/blob/master/LICENSE)
 
