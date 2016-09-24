@@ -15,3 +15,5 @@ script:
   coverage run --source=KMlogger setup.py test
 after_success:
   coveralls
+notifications:
+  email: false
