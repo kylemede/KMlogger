@@ -14,6 +14,8 @@ Installation Notes
 Only uses standardized Python libraries and KMlogger is hosted on PyPi.  Thus, the easiest way to install it is:
  
  $pip install KMlogger
+ 
+ NOTE: On OSX it can be difficult to install psutil, which KMlogger uses to detect the number of CPUs, memory...  I will update KMlogger to not require psutil soon.  please email me at kylemede@gmail.com if this hasn't been done yet and is causing a problem for you.
 
 
 License
