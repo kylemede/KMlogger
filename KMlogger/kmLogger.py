@@ -5,6 +5,7 @@ import platform
 import datetime
 import sys
 import os
+import multiprocessing
 from six.moves import range
 #import traceback
 
@@ -162,22 +163,11 @@ class KMlogger(logging.getLoggerClass()):
         infoStr+="\n"+'OS Version = '+platform.uname()[2]
         infoStr+="\n"+'Machine UserName = '+platform.uname()[1]
         infoStr+="\n"+'Machine Processor Type = '+platform.processor()
-        try:
-            #a quick fix as some macs have issues with psutil
-            import psutil  
-            infoStr+="\n"+'Number of cores = '+str(psutil.cpu_count())
-        except:
-            try:
-                import multiprocessing
-                multiprocessing.cpu_count()
-            except:
-                infoStr+="\n Both psutil and multiprocessing were unable to provide the number of CPUs."
-        try:
-            totMem = int(round(psutil.virtual_memory()[0]/1073741824.0))
-            percentMem = int(round(psutil.virtual_memory()[2]))
-            infoStr+="\n"+'Total RAM = '+str(totMem)+'[GB], with ~ '+str(percentMem)+"% already in use at simulation start"
-        except:
-            infoStr+="\n A problem with psutil occurred while investigating available RAM."
+        multiprocessing.cpu_count()
+        ## Some Macs have issues installing psutil, so I will remove it as a dependency for now.
+        #import psutil 
+        #totMem = int(round(psutil.virtual_memory()[0]/1073741824.0))
+        #percentMem = int(round(psutil.virtual_memory()[2]))
         infoStr+="\n"+'Python Version = '+repr(platform.python_version())
         infoStr+="\n"+'='*50
         self.fileonly(infoStr)

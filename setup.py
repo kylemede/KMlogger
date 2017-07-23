@@ -16,7 +16,7 @@ if sys.argv[-1] == "publish":
 setup(    
     name='KMlogger', 
     packages =['KMlogger'],
-    version="1.0.4", 
+    version="1.0.5", 
     author='Kyle Mede',
     author_email = 'kylemede@gmail.com',
     url = 'https://github.com/kylemede/KMlogger',
@@ -34,6 +34,6 @@ setup(
         'Programming Language :: Python'
         ],
     #include_dirs = [np.get_include()],
-    install_requires = ['psutil','six'],
+    install_requires = ['six'],
     #ext_modules=[]
 )
